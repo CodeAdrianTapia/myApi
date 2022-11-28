@@ -1,4 +1,4 @@
-# apitemplate
+# node-js-template
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
 
@@ -9,7 +9,7 @@ This application supports the [Getting Started with Node on Heroku](https://devc
 Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
 
 ```sh
-$ git clone git@github.com:jomaoppa/myApi.git # or clone your own fork
+$ git clone git@github.com:jomaoppa/node-js-template.git # or clone your own fork
 $ cd node-js-template
 $ npm install
 $ npm start
