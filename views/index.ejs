@@ -42,6 +42,7 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+
 <div id="ytplayer"></div>
 
 <script>
@@ -55,11 +56,35 @@
   // YouTube player after the API code downloads.
   var player;
   function onYouTubePlayerAPIReady() {    player = new YT.Player('ytplayer', {
-      height: '720',
-      width: '1080',
-      videoId: 'YeyFwT1Dgbw'
+      height:'480',
+      width: '720',
+      videoId: 'YeyFwT1Dgbw',
+	playerVars: {
+            controls: 0,
+            disablekb: 1
+        },
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          } 		
     });
-  }
+
+    }
+    function onPlayerReady(evt) {
+        console.log('onPlayerReady', evt);
+    }
+    function onPlayerStateChange(evt) {
+        console.log('onPlayerStateChange', evt);
+        if (evt.data == YT.PlayerState.PLAYING && !done) {
+            setTimeout(stopVideo, 6000);
+            done = true;
+        }
+    }
+
+    function stopVideo() {
+        console.log('stopVideo');
+        player.stopVideo();
+    }
 </script>
 
     <!-- Bootstrap core JavaScript
