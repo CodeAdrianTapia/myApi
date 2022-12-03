@@ -6,6 +6,11 @@ body {
   text-align: center;
 }
 #ytplayer {
-    margin-top:10px;
-    margin-left:200px;
+    margin-top:50px;
+    margin-left:350px;
+}
+
+#playerControls {
+    margin-left:350px;
+
 }
